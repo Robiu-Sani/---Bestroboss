@@ -1,39 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import card from "../../images/nav-shop.png";
 
 export default function Navbar() {
   const navItems = (
     <>
       <li>
-        <Link className="font-bold text-white" to={"/"}>
+        <NavLink className="font-bold text-white" to={"/"}>
           HOME
-        </Link>
+        </NavLink>
       </li>
 
       <li>
-        <Link className="font-bold text-white" to={"/"}>
+        <NavLink className="font-bold text-white" to={"/contact"}>
           CONTACT US
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link className="font-bold text-white" to={"/"}>
+        <NavLink className="font-bold text-white" to={"/deshboard"}>
           DASHBOARD
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link className="font-bold text-white" to={"/"}>
-          DASHBOARD
-        </Link>
-      </li>
-      <li>
-        <Link className="font-bold text-white" to={"/"}>
+        <NavLink className="font-bold text-white" to={"/ourmenu"}>
           OUR MENU
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link className="font-bold text-white" to={"/"}>
+        <NavLink className="font-bold text-white" to={"/ourshop"}>
           OUR SHOP
-        </Link>
+        </NavLink>
       </li>
     </>
   );
@@ -41,7 +36,11 @@ export default function Navbar() {
     <div className="navbar bg-[rgba(0,0,0,0.4)] fixed top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost text-white lg:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -59,22 +58,24 @@ export default function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[rgba(0,0,0,0.6)] rounded-box w-52"
           >
             {navItems}
           </ul>
         </div>
-        <Link to={"/"} className="btn btn-ghost text-xl">
+        <NavLink to={"/"} className="btn btn-ghost text-xl">
           <span className="text-sm text-white logo-text font-bold">
             <h1 className="text-2xl">BISTROBOOS</h1>
             RESTAURANT
           </span>
-        </Link>
+        </NavLink>
       </div>
       <div className="w-[35%] md:w-[80%] justify-end">
         <ul className="menu menu-horizontal px-1 hidden lg:flex">{navItems}</ul>
         <img src={card} className="h-[40px] mr-3" />
-        <a className="btn">Button</a>
+        <Link className="font-bold text-white" to={"/login"}>
+          Join
+        </Link>
       </div>
     </div>
   );

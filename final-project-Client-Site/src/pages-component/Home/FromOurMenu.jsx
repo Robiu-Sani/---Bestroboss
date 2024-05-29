@@ -3,7 +3,7 @@ import bgImage from "../../images/featured.jpg";
 export default function FromOurMenu() {
   return (
     <div
-      className="w-full mb-10 px-2 py-10 bgattach"
+      className="w-full mb-10 px-2 py-10 bg-fixed bgattach"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bgImage})`,
       }}

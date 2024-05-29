@@ -2,7 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../../pages-component/Root";
 import Error from "../Error/Error";
 import Home from "../../pages-component/Home/Home";
-import About from "../../pages-component/About/About";
+import OurMenu from "../../pages-component/OurMenu/OurMenu";
+import Ourshaps from "../../pages-component/Ourshaps/Ourshaps";
+import ContactUs from "../../pages-component/ContactUs/ContactUs";
+import Login from "../../pages-component/Authcation/Login";
+import Deshboard from "../../pages-component/Deshboard/Deshboard";
 
 const router = createBrowserRouter([
   {
@@ -15,10 +19,26 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/about",
-        element: <About></About>,
+        path: "/ourmenu",
+        element: <OurMenu></OurMenu>,
+      },
+      {
+        path: "/ourshop",
+        element: <Ourshaps></Ourshaps>,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs></ContactUs>,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/deshboard",
+    element: <Deshboard></Deshboard>,
   },
 ]);
 

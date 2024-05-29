@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Banner from "./Banner";
 import BistroBoss from "./BistroBoss";
 import FromOurMenu from "./FromOurMenu";
@@ -10,6 +11,9 @@ import Testimonial from "./Testimonial";
 export default function HOme() {
   return (
     <div>
+      <Helmet>
+        <title>Bistroboss </title>
+      </Helmet>
       <Banner></Banner>
       <main className="container mx-auto p-2">
         <OnlineOrder></OnlineOrder>
